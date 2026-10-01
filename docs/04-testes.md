@@ -2,7 +2,7 @@
 
 Há duas formas de testar, e as duas valem para a apresentação:
 
-1. **Automatizada** — `python -m unittest discover -s tests -t . -v` (54 testes, ~6 s).
+1. **Automatizada** — `python -m unittest discover -s tests -t . -v` (55 testes, ~6 s).
 2. **Ao vivo** — `python tools/sonda.py` contra um master rodando, mostrando cada cenário na tela.
 
 ## 1. Como rodar
@@ -21,7 +21,7 @@ python -m unittest tests.test_integracao.QuedaEReconexaoTest.test_queda_detectad
 pytest -v
 ```
 
-Saída esperada no final: `Ran 54 tests in ...s` e `OK`.
+Saída esperada no final: `Ran 55 tests in ...s` e `OK`.
 
 ## 2. Requisitos da Sprint 1 → onde são provados
 
@@ -29,7 +29,7 @@ Saída esperada no final: `Ran 54 tests in ...s` e `OK`.
 |---|---|---|
 | master e ≥2 workers como **processos distintos** | `test_processos.test_master_e_dois_workers_em_processos_distintos` | 3 terminais (ou 2 computadores) |
 | UUID/label/host/port **persistentes** | `ConfigTest.test_uuid_e_gerado_e_persistido`, `..._sobrescritas_..._sao_salvas` | abrir `config/worker1.json` antes/depois de reiniciar |
-| **Fragmentação** | `BufferTest.test_mensagem_fragmentada_byte_a_byte`, `..._caractere_utf8_cortado_ao_meio`, `EnquadramentoTest.test_mensagem_fragmentada_pela_rede` | sonda cenário 1 |
+| **Fragmentação** | `BufferTest.test_mensagem_fragmentada_byte_a_byte`, `..._caractere_utf8_cortado_ao_meio`, `EnquadramentoTest.test_mensagem_fragmentada_pela_rede`, `..._mensagem_maior_que_o_recv` | sonda cenário 1 |
 | **Múltiplas mensagens em um recv** | `BufferTest.test_varias_mensagens_em_um_recv`, `EnquadramentoTest.test_varias_mensagens_em_um_envio` | sonda cenários 2 e 8 |
 | **JSON inválido** não derruba | `EnvelopeTest.test_json_invalido`, `EnquadramentoTest.test_json_invalido_nao_derruba_e_conexao_continua`, `..._bytes_aleatorios_e_linha_gigante` | sonda cenário 3 |
 | **Validação do envelope** | `EnvelopeTest.*`, `EnquadramentoTest.test_envelope_invalido_tipo_desconhecido_e_payload_invalido` | sonda cenário 4 |

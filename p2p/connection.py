@@ -25,7 +25,7 @@ from . import ndjson
 from .envelope import FRAME_TOO_LARGE, ProtocolError, parse_line
 from .logs import describe
 
-RECV_SIZE = 65536
+RECV_SIZE = 4096
 _ids = itertools.count(1)
 
 

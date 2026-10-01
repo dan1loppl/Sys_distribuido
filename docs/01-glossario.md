@@ -127,7 +127,8 @@ accept()  ... espera ...  <------ connect ---- create_connection(("192.168.0.10"
 ### send / sendall / recv
 - `send(dados)` envia bytes, **mas pode enviar só parte deles**.
 - `sendall(dados)` repete `send` até enviar tudo — é o que usamos.
-- `recv(65536)` devolve **o que já chegou**, até 65536 bytes: pode ser meia mensagem, uma, ou várias.
+- `recv(4096)` devolve **o que já chegou**, até 4096 bytes: pode ser meia mensagem, uma, ou várias.
+  Uma mensagem maior que 4096 bytes chega obrigatoriamente em vários `recv` — por isso existe o buffer.
   Se devolver `b""` (vazio), o outro lado **fechou** a conexão (EOF).
 
 ### EOF / conexão encerrada / reset

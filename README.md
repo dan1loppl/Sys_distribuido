@@ -65,7 +65,7 @@ O `--master-host` fica salvo no arquivo de config. Detalhes de rede e firewall e
 python -m unittest discover -s tests -t . -v
 ```
 
-54 testes: unitários (buffer, envelope, dispatcher, correlação, registro, config), integração
+55 testes: unitários (buffer, envelope, dispatcher, correlação, registro, config), integração
 com TCP real, e um teste que sobe **master + 2 workers como processos distintos**.
 Mapa de cada teste para o requisito da sprint em [docs/04-testes.md](docs/04-testes.md).
 

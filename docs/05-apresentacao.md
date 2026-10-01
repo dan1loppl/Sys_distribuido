@@ -121,7 +121,7 @@ Mostrar a sonda (`8/8` e `9/9` OK) **e** o master: cada problema vira `WARNING`,
 ```bash
 python -m unittest discover -s tests -t . -v
 ```
-`Ran 54 tests ... OK`. Citar o teste de processos (sobe master + 2 workers de verdade e derruba um).
+`Ran 55 tests ... OK`. Citar o teste de processos (sobe master + 2 workers de verdade e derruba um).
 
 ### Passo 9 — Logs e Git
 - `logs/master-01.log` e `logs/worker-01.log`: pegar um `request_id` e achar nos dois arquivos.

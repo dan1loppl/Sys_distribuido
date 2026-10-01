@@ -158,6 +158,15 @@ class EnquadramentoTest(IntegrationBase):
         reply = client.read(1)
         self.assertEqual(reply[0]["type"], env.REGISTRATION_ACK)
 
+    def test_mensagem_maior_que_o_recv(self):
+        # 10 000 bytes > RECV_SIZE (4096): o master precisa de vários recv() para montá-la.
+        client = self.client()
+        message = client.register_message()
+        message["payload"]["hostname"] = "x" * 10_000
+        client.send(message)
+        reply = client.read(1)[0]
+        self.assertEqual((reply["type"], reply["request_id"]), (env.REGISTRATION_ACK, message["request_id"]))
+
     def test_varias_mensagens_em_um_envio(self):
         client = self.registered_client()
         heartbeats = [client.heartbeat_message(seq) for seq in range(1, 6)]
