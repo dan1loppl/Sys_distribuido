@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# Logs gerados na execução
+logs/
+
+# Arquivos temporários da escrita atômica de configuração
+*.tmp
+
+# Identidade local da sonda de testes (cada máquina gera a sua)
+config/sonda.json
+
+# Anotações pessoais de estudo (não fazem parte da entrega)
+sprints.md
+pesquisa_base_sprint1.md
+
+# Editor / sistema
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
