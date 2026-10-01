@@ -1,0 +1,11 @@
+{
+  "group": "grupo-01",
+  "uuid": "",
+  "label": "master-01",
+  "host": "0.0.0.0",
+  "port": 5000,
+  "heartbeat_timeout": 15.0,
+  "monitor_interval": 1.0,
+  "status_interval": 20.0,
+  "log_dir": "logs"
+}

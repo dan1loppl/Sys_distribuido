@@ -1,0 +1,13 @@
+{
+  "group": "grupo-01",
+  "uuid": "",
+  "label": "worker-02",
+  "master_host": "127.0.0.1",
+  "master_port": 5000,
+  "heartbeat_interval": 5.0,
+  "ack_timeout": 3.0,
+  "max_missed_acks": 3,
+  "reconnect_initial_delay": 1.0,
+  "reconnect_max_delay": 10.0,
+  "log_dir": "logs"
+}
