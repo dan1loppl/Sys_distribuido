@@ -11,6 +11,7 @@ explicar o que está acontecendo. Tempo estimado: 10–12 minutos.
 
 ### 1.2 Rede
 Os dois computadores precisam estar na **mesma rede** e um precisa alcançar o outro.
+Guia simplificado com os erros mais comuns: [07-rede-entre-computadores.md](07-rede-entre-computadores.md).
 
 1. **PC A (master)**: descubra o IP com `ipconfig` → "Endereço IPv4" do adaptador Wi-Fi/Ethernet
    (ex.: `192.168.0.10`). O master também lista os IPs ao iniciar — ignore os de adaptadores virtuais

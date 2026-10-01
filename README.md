@@ -57,7 +57,7 @@ python worker.py --config config/worker2.json --master-host 192.168.0.10
 ```
 
 O `--master-host` fica salvo no arquivo de config. Detalhes de rede e firewall em
-[docs/05-apresentacao.md](docs/05-apresentacao.md).
+[docs/07-rede-entre-computadores.md](docs/07-rede-entre-computadores.md) (passo a passo e erros comuns).
 
 ## Testes automatizados
 
@@ -112,3 +112,4 @@ docs/                  documentação didática (comece pelo glossário)
 | [04 — Testes](docs/04-testes.md) | o que cada teste prova e como rodar |
 | [05 — Apresentação](docs/05-apresentacao.md) | roteiro da demonstração entre computadores + perguntas prováveis |
 | [06 — Git e entrega](docs/06-git-e-entrega.md) | repositório, colaboradores e histórico de commits |
+| [07 — Rede entre computadores](docs/07-rede-entre-computadores.md) | como conectar worker e master em PCs diferentes; erro "recusou ativamente", firewall, hotspot |
